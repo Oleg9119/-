@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Опросный лист для проведения тромболитической терапии</title>
+    <style>
+        .bold {
+            font-weight: 700;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+        }
+
+        .table,
+        .table td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .table td.oneInput {
+            text-align: center;
+        }
+
+        .table td.oneInput.yes,
+        .table td.oneInput.no {
+            min-width: 50px;
+        }
+
+        .cont {
+            display: flex;
+        }
+
+        .table td.oneInput .cont {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cont input[type='radio'] {
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .cont label {
+            cursor: pointer;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <p>2. Опросный лист для проведения тромболитической терапии</p>      
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Вопрос</td>
+                <td class="oneInput yes">ДА</td>
+                <td class="oneInput no">НЕТ</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Возраст младше 18 лет</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="less18True" name="ageLess18" value="ageLess18True">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="less18False" name="ageLess18" value="ageLess18False">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Известная гиперчувствительность к актилизе</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="actilizTrue" name="actiliz" value="actilizTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="actilizFalse" name="actiliz" value="actilizFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Известная гиперчувствительность к гентмицину</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="gentmizinTrue" name="gentmizin" value="gentmizinTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="gentmizinFalse" name="gentmizin" value="gentmizinFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Настоящее кровотечение или обширное кровотечение за последние 6 месяцев</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="bleedingTrue" name="bleeding" value="bleedingTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="bleedingFalse" name="bleeding" value="bleedingFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Геморрагический диатез</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="diatezTrue" name="diatez" value="diatezTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="diatezFalse" name="diatez" value="diatezFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Обширное хирургическое вмешательство, травма, роды, пункция некомпремируемых сосудов в течение последних 10 дней</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="surgicalTrue" name="surgical" value="surgicalTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="surgicalFalse" name="surgical" value="surgicalFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Печеночная недостаточность (цирроз, активный гепатит, портальная гипертензия)</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="liverProblemTrue" name="liverProblem" value="liverProblemTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="liverProblemFalse" name="liverProblem" value="liverProblemFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Артериальные аневризмы, дефекты развития артерий или вен</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="arterialAnevrizmTrue" name="arterialAnevrizm" value="arterialAnevrizmTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="arterialAnevrizmFalse" name="arterialAnevrizm" value="arterialAnevrizmFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Опухоли с высоким риском кровотечения</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="tumorsTrue" name="tumors" value="tumorsTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="tumorsFalse" name="tumors" value="tumorsFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Бактериальный эндокардит, перикардит</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="bacterialEndoTrue" name="bacterialEndo" value="bacterialEndoTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="bacterialEndoFalse" name="bacterialEndo" value="bacterialEndoFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Острый панкреатит</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="pancreatitTrue" name="pancreatit" value="pancreatitTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="pancreatitFalse" name="pancreatit" value="pancreatitFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Подтверждённая язвенная болезнь желудка в течение последних 3 месяцев</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="stomachTrue" name="stomach" value="stomachTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="stomachFalse" name="stomach" value="stomachFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Прием непрямых антикоагулянтов (варфарин)</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="coagulantsTrue" name="coagulants" value="coagulantsTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="coagulantsFalse" name="coagulants" value="coagulantsFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Недавний инфаркт миокарда</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="infarktTrue" name="infarkt" value="infarktTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="infarktFalse" name="infarkt" value="infarktFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Быстрое улучшение состояния (монтонное и драматическое)</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="healthyTrue" name="healthy" value="healthyTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="healthyFalse" name="healthy" value="healthyFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Судороги в начале инсульта</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="convulsionsTrue" name="convulsions" value="convulsionsTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="convulsionsFalse" name="convulsions" value="convulsionsFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Сведения о перенесенном инсульте или серьезной ЧМТ за последние 3 месяца</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="insultTrue" name="insult" value="insultTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="insultFalse" name="insult" value="insultFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Сахарный диабет и любой инсульт в анамнезе</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="diabetTrue" name="diabet" value="diabetTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="diabetFalse" name="diabet" value="diabetFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Применение гепарина в течение 48 часов</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="geparinTrue" name="geparin" value="geparinTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="geparinFalse" name="geparin" value="geparinFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Артериальная гипертензия свыше 185/110 мм рт. ст. или необходимость интенсивного снижения менее этих цифр</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="hypertensiaTrue" name="hypertensia" value="hypertensiaTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="hypertensiaFalse" name="hypertensia" value="hypertensiaFalse">
+                    </div>
+                </td>
+            </tr>
+            <tr class="last">
+                <td>Гликемия менее 3 и более 20 ммоль/л</td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="glikemiaTrue" name="glikemia" value="glikemiaTrue">
+                    </div>
+                </td>
+                <td class="oneInput">
+                    <div class="cont">
+                        <input type="radio" id="glikemiaFalse" name="glikemia" value="glikemiaFalse">
+                    </div>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <input type="checkbox" name="tesssssstt">
+    <input type="text" name="laskdlaskdlkasldk" value="">
+
+
+    <script>
+        document.addEventListener('change', function(event) {
+            if(event.target.type == 'radio') {
+                if(event.target.checked == true) {
+                    let radioGroup = document.querySelectorAll('input[name="' + event.target.name + '"]');
+                    for(i = 0; i < radioGroup.length; i++) {
+                        radioGroup[i].removeAttribute('checked');
+                    }
+                    event.target.setAttribute('checked', true);
+                }
+            }
+            if(event.target.type == 'checkbox') {
+                if(event.target.checked == true) {
+                    event.target.setAttribute('checked', true);
+                } else {
+                    event.target.removeAttribute('checked');
+                }
+            }
+            if(event.target.type == 'text') {
+                let val = event.target.value;
+                event.target.setAttribute('value', val);
+            }
+        });
+    </script>
+</body>
+</html>
